@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'iransansweb';
+    src: url("Iranian\ Sans.ttf") format(ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Iranian\ Sans';
+    box-sizing: border-box;
+}
+section{
+    position: relative;
+    background: #737c81;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+}
+section.active{
+    background: #c0c4c6;
+}
+section .container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 15px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+section .container .user{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+section .container .user .imgbox{
+    position: relative;
+    width : 50%;
+    height: 100%;
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+}
+section .container .user .formbox{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    transition: 0.7s;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 40px;
+}
+section .container .user .formbox h2{
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+section .container .user .formbox input{
+    width: 300px;
+    padding: 10px;
+    background: #f7f7f7;
+    color: #333;
+    border: none;
+    outline: none;
+    margin: 8px 0px;
+    font-size: 16px;
+    font-weight: 300px;
+    border-radius: 3px;
+    box-shadow: none;
+}
+section .container .user .formbox input[type="submit"]{
+    background: rgb(0, 225, 255);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.5;
+    border-radius: 5px;
+}
+section .container .user.signupbox .formbox input[type="submit"]{
+    background: rgb(179, 4, 223);
+}
+section .container .user .formbox .signup{
+    position: relative;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    font-weight: 300;
+}
+section .container .user .formbox .signup a{
+    text-decoration: none;
+    color: rgb(0, 225, 255);
+    font-weight: 600;
+}
+
+
+section .container .user .formbox a{
+    text-decoration: none;
+    color:rgb(179, 4, 223) ;
+    font-weight: 600;
+}
+
+
+section .container .signupbox{
+    pointer-events: none;
+}
+section .container.active .signupbox{
+    pointer-events: initial;
+}
+
+
+section .container .signupbox .formbox{
+    top: 100%;
+}
+section .container.active .signupbox .formbox{
+    top: 0;
+}
+
+
+section .container .signupbox .imgbox{
+    top: -100%;
+}
+section .container.active .signupbox .imgbox{
+    top: 0;
+}
+
+
+section .container .signinbox .formbox{
+    top: 0;
+}
+section .container.active .signinbox .formbox{
+    top: 100%;
+}
+section .container .signinbox .imgbox{
+    top: 0;
+}
+section .container.active .signinbox .imgbox{
+    top: 100%;
+}
+@media(max-width:991px){
+    section .container{
+        max-width: 400px;
+    }
+    section .container .user .imgbox{
+        display: none;
+    }
+    section .container .user .formbox{
+        width: 100%;
+    }
+    section .container.active .signinbox .formbox{
+        top: -100%;
+    }
+}

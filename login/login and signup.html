@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login and sign up.css">
+</head>
+<body>
+<section>
+    <div class="container">
+            <div class="user signinbox">
+                 <div class="imgbox"><img height ="500" src="img/R.png"  alt=""></div>
+                    <div class="formbox">
+                    <form action="">
+                        <h2>login</h2>
+                     <input type="text" placeholder="username">
+                     <input type="pasword" placeholder="pasword">
+                     <input type="submit" value="login">
+                    <p class="signup"> dont have account <a href="#" onclick="toogleform()"> sign up</a></p>
+                </form>
+            </div>
+            </div>
+
+        
+
+
+    <div class="user signupbox">
+        <div class="formbox">
+            <form action="">
+                <h2>create account</h2>
+                <input type="text" placeholder="username">
+                <input type="email" placeholder="email">
+                <input type="pasword" placeholder="pasword">
+                <input type="pasword" placeholder="repeat the pasword">
+                <input type="submit" value="login">
+                <p class="login">have account  <a href="#" onclick="toogleform()">login</a></p>
+            </form>
+        </div>
+                <div class="imgbox"><img height="500" width="400" src="img/isometric-user-login-landing-page.jpg" alt=""></div>
+    </div>
+
+
+        <script>
+            function toogleform(){
+                let section = document.querySelector('section');
+                section.classList.toggle('active');
+                let container = document.querySelector('.container');
+                container.classList.toggle('active');
+            }
+        </script>
+            </div>
+</section>
+</body>
+</html>
